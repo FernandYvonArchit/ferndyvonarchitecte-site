@@ -1,0 +1,122 @@
+{
+  "id": "sulniac",
+  "name": "Sulniac",
+  "code": "SUL",
+  "categorie_texte": "13 logements locatifs sociaux",
+  "commune": "Sulniac — 56",
+  "intro": "Treize logements locatifs sociaux organisés autour de venelles plantées, chacun ouvert sur une terrasse ou un jardin privatif. Une écriture de toitures en pignon qui reprend le parcellaire du bourg.",
+  "span": "lg",
+  "specs": [
+    {
+      "label": "Maître d’ouvrage",
+      "value": "Vannes Golfe Habitat / Morbihan Habitat"
+    },
+    {
+      "label": "Type",
+      "value": "13 logements locatifs sociaux — collectif neuf"
+    },
+    {
+      "label": "Lieu",
+      "value": "1 Allée Clairette, Sulniac · Morbihan (56250)"
+    },
+    {
+      "label": "Surface",
+      "value": "1 000 m² SDP / 950 m² SHAB"
+    },
+    {
+      "label": "Coût des travaux",
+      "value": "1,35 M€ HT hors VRD"
+    },
+    {
+      "label": "Mission",
+      "value": "Base + OPC"
+    },
+    {
+      "label": "Avancement",
+      "value": "DET en cours"
+    }
+  ],
+  "gallery": [
+    {
+      "file": "sul_gal1.jpg",
+      "featured": false
+    },
+    {
+      "file": "sul_gal2.jpg",
+      "featured": false
+    },
+    {
+      "file": "sul_gal3.jpg",
+      "featured": false
+    },
+    {
+      "file": "sul_gal4.jpg",
+      "featured": false
+    },
+    {
+      "file": "sul_gal5.jpg",
+      "featured": false
+    },
+    {
+      "file": "sul_axo.jpg",
+      "featured": false
+    },
+    {
+      "file": "sul_hero.jpg",
+      "featured": false
+    },
+    {
+      "file": "sul_detail.jpg",
+      "featured": false
+    }
+  ],
+  "tile_file": "sul_axo.jpg",
+  "schemas": [
+    {
+      "file": "sul_schema1.jpg",
+      "label": "Un programme dense sur une parcelle en forte pente",
+      "max_width": null
+    },
+    {
+      "file": "sul_schema2.jpg",
+      "label": "Des gabarits faisant écho aux typologies traditionnelles bretonnes (la longée et l’annexe en monopente)",
+      "max_width": null
+    },
+    {
+      "file": "sul_schema3.jpg",
+      "label": "Des volumes intermédiaires qui affirment les gabarits…",
+      "max_width": null
+    },
+    {
+      "file": "sul_schema4.jpg",
+      "label": "…Et offrent des espaces extérieurs généreux à tous les niveaux",
+      "max_width": null
+    }
+  ],
+  "schemas_layout": "compact",
+  "schemas_align_height": null,
+  "schemas_hide_caption": false,
+  "schemas_after_gallery": false,
+  "schemas_side_file": null,
+  "plans": [
+    {
+      "file": "plan_sul_masse.jpg",
+      "label": "Plan de masse",
+      "max_width": null
+    },
+    {
+      "file": "plan_sul_rdc.jpg",
+      "label": "Plan du rez-de-chaussée",
+      "max_width": null
+    },
+    {
+      "file": "plan_sul_r1.jpg",
+      "label": "Plan du R+1",
+      "max_width": null
+    }
+  ],
+  "cats": [
+    "collectifs"
+  ],
+  "slug": "sulniac"
+}

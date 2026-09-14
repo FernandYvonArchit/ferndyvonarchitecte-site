@@ -1,0 +1,71 @@
+{
+  "id": "dojo",
+  "name": "Dojo Zen",
+  "code": "DOJO",
+  "categorie_texte": "Rénovation",
+  "commune": "Couëron — 44",
+  "intro": "Restructuration et rénovation thermique et acoustique d’une maison de famille : création d’un dojo zen et d’un cabinet de sophrologie sous la charpente conservée.",
+  "span": "md",
+  "specs": [
+    {
+      "label": "Type",
+      "value": "Logement individuel — rénovation / restructuration"
+    },
+    {
+      "label": "Lieu",
+      "value": "Couëron · Loire-Atlantique (44)"
+    },
+    {
+      "label": "Surface",
+      "value": "220 m²"
+    },
+    {
+      "label": "Coût des travaux",
+      "value": "180 K€"
+    },
+    {
+      "label": "Mission",
+      "value": "Complète"
+    },
+    {
+      "label": "Livraison",
+      "value": "Livré"
+    }
+  ],
+  "gallery": [
+    {
+      "file": "dojo_g0.jpg",
+      "featured": true
+    },
+    {
+      "file": "dojo_g1.jpg",
+      "featured": false
+    },
+    {
+      "file": "dojo_g2.jpg",
+      "featured": false
+    },
+    {
+      "file": "dojo_g3.jpg",
+      "featured": false
+    }
+  ],
+  "tile_file": "grid_dojo.jpg",
+  "schemas": [
+    {
+      "file": "dojo_detail.jpg",
+      "label": "Détail de bardage bois en couronnement",
+      "max_width": 260
+    }
+  ],
+  "schemas_layout": null,
+  "schemas_align_height": null,
+  "schemas_hide_caption": false,
+  "schemas_after_gallery": true,
+  "schemas_side_file": null,
+  "plans": [],
+  "cats": [
+    "renovations"
+  ],
+  "slug": "dojo-zen"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "plou",
+  "name": "Plouharneux",
+  "code": "PLOU",
+  "categorie_texte": "Extension",
+  "commune": "Damgan — 56",
+  "intro": "Extension et rénovation d’une maison des années 1930, impasse de Plouharneux. Une circulation en enfilade, orientée au sud, relie l’extension à l’existant jusqu’à une terrasse à l’ouest.",
+  "span": "md",
+  "specs": [
+    {
+      "label": "Maître d’ouvrage",
+      "value": "Privé"
+    },
+    {
+      "label": "Type",
+      "value": "Logement individuel — rénovation / extension"
+    },
+    {
+      "label": "Lieu",
+      "value": "Impasse de Plouharneux, Damgan · Morbihan (56)"
+    },
+    {
+      "label": "Surface",
+      "value": "Extension de 40 m² et rénovation de l’existant"
+    },
+    {
+      "label": "Coût des travaux",
+      "value": "135 K€"
+    },
+    {
+      "label": "Mission",
+      "value": "Complète"
+    },
+    {
+      "label": "Livraison",
+      "value": "Livré (2024)"
+    }
+  ],
+  "gallery": [
+    {
+      "file": "plou_new1.jpg",
+      "featured": true
+    },
+    {
+      "file": "plou_new2.jpg",
+      "featured": false
+    },
+    {
+      "file": "plou_new3.jpg",
+      "featured": false
+    }
+  ],
+  "tile_file": "plou_old_tile.jpg",
+  "schemas": [],
+  "schemas_layout": null,
+  "schemas_align_height": null,
+  "schemas_hide_caption": false,
+  "schemas_after_gallery": false,
+  "schemas_side_file": null,
+  "plans": [
+    {
+      "file": "plan_plou_rdc.jpg",
+      "label": "Plan du rez-de-chaussée",
+      "max_width": 1015
+    },
+    {
+      "file": "plou_facades.jpg",
+      "label": "Façades est et sud",
+      "max_width": null
+    }
+  ],
+  "cats": [
+    "extensions"
+  ],
+  "slug": "plouharneux"
+}

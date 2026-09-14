@@ -1,0 +1,37 @@
+{
+  "id": "lat",
+  "name": "Lat",
+  "code": "LAT",
+  "categorie_texte": "Rénovation",
+  "commune": "Nantes — 44",
+  "intro": "Surélévation et rénovation d’une habitation à Nantes.",
+  "span": "md",
+  "specs": [
+    {
+      "label": "Type",
+      "value": "Logement individuel — surélévation / rénovation"
+    },
+    {
+      "label": "Lieu",
+      "value": "Nantes · Loire-Atlantique (44)"
+    }
+  ],
+  "gallery": [
+    {
+      "file": "bizot_axo.jpg",
+      "featured": false
+    }
+  ],
+  "tile_file": "bizot_axo.jpg",
+  "schemas": [],
+  "schemas_layout": null,
+  "schemas_align_height": null,
+  "schemas_hide_caption": false,
+  "schemas_after_gallery": false,
+  "schemas_side_file": null,
+  "plans": [],
+  "cats": [
+    "renovations"
+  ],
+  "slug": "lat"
+}

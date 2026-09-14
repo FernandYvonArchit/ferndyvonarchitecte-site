@@ -1,0 +1,79 @@
+{
+  "id": "sittelle",
+  "name": "Sittelle",
+  "code": "SIT",
+  "categorie_texte": "Logements collectifs",
+  "commune": "Vannes — 56",
+  "intro": "Étude pour la construction de 25 logements Adapei, 28 logements locatifs sociaux et 12 logements en bail réel solidaire, organisés autour de plusieurs « zones de rencontre » paysagères à Vannes.",
+  "span": "md",
+  "specs": [
+    {
+      "label": "Maître d’ouvrage",
+      "value": "Vannes Golfe Habitat / Morbihan Habitat"
+    },
+    {
+      "label": "Type",
+      "value": "25 logements Adapei + 28 logements locatifs sociaux + 12 logements BRS"
+    },
+    {
+      "label": "Lieu",
+      "value": "7 Rue du Commandant Charcot, Vannes · Morbihan (56000)"
+    },
+    {
+      "label": "Coût prévisionnel",
+      "value": "5,33 M€ HT hors VRD"
+    },
+    {
+      "label": "Mission",
+      "value": "Base + OPC"
+    },
+    {
+      "label": "Avancement",
+      "value": "Étude — non réalisé (arrêté en phase APS, 2023)"
+    }
+  ],
+  "gallery": [
+    {
+      "file": "sit_b.jpg",
+      "featured": false
+    },
+    {
+      "file": "sit_c.jpg",
+      "featured": false
+    }
+  ],
+  "tile_file": "sit_tile.jpg",
+  "schemas": [
+    {
+      "file": "sit_axo.jpg",
+      "label": "Vue axonométrique du projet",
+      "max_width": null
+    },
+    {
+      "file": "sit_facades.jpg",
+      "label": "Façades sud",
+      "max_width": null
+    }
+  ],
+  "schemas_layout": null,
+  "schemas_align_height": null,
+  "schemas_hide_caption": false,
+  "schemas_after_gallery": false,
+  "schemas_side_file": null,
+  "plans": [
+    {
+      "file": "sit_masse_new.jpg",
+      "label": "Plan masse",
+      "max_width": null
+    },
+    {
+      "file": "sit_plan_etages.jpg",
+      "label": "Plans des étages",
+      "max_width": null
+    }
+  ],
+  "cats": [
+    "collectifs"
+  ],
+  "slug": "sittelle"
+}

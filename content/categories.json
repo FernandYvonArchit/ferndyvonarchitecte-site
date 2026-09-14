@@ -1,0 +1,22 @@
+[
+  {
+    "key": "extensions",
+    "label": "Extensions",
+    "file": "hero_iam.jpg"
+  },
+  {
+    "key": "renovations",
+    "label": "Rénovations",
+    "file": "cat_renovation_new.jpg"
+  },
+  {
+    "key": "collectifs",
+    "label": "Logements collectifs",
+    "file": "cat_collectif_new.jpg"
+  },
+  {
+    "key": "etudes-urbaines",
+    "label": "Études urbaines",
+    "file": "cat_etudes_new.jpg"
+  }
+]

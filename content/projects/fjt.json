@@ -1,0 +1,74 @@
+{
+  "id": "fjt",
+  "name": "FJT Kerizac",
+  "code": "FJT",
+  "categorie_texte": "Rénovation",
+  "commune": "Vannes — 56",
+  "intro": "Réorganisation des locaux administratifs et communs et recomposition des façades avec isolation thermique par l’extérieur, pour le Foyer de Jeunes Travailleurs Kerizac à Vannes. Un maximum d’éléments existants sont conservés.",
+  "span": "md",
+  "specs": [
+    {
+      "label": "Maître d’ouvrage",
+      "value": "Vannes Golfe Habitat"
+    },
+    {
+      "label": "Type",
+      "value": "Établissement collectif — rénovation, réorganisation des locaux et ITE"
+    },
+    {
+      "label": "Lieu",
+      "value": "Vannes · Morbihan (56)"
+    },
+    {
+      "label": "Surface",
+      "value": "Locaux administratifs et communs, 400 m² environ"
+    },
+    {
+      "label": "Coût des travaux",
+      "value": "550 K€"
+    },
+    {
+      "label": "Mission",
+      "value": "ESQ + AVP + PRO"
+    }
+  ],
+  "gallery": [
+    {
+      "file": "fjt_facade1.jpg",
+      "featured": false
+    },
+    {
+      "file": "fjt_facade2.jpg",
+      "featured": false
+    }
+  ],
+  "tile_file": "fjt_tile.jpg",
+  "schemas": [
+    {
+      "file": "fjt_detail1.jpg",
+      "label": "Détail de menuiserie en applique",
+      "max_width": null
+    },
+    {
+      "file": "fjt_detail2.jpg",
+      "label": "Axonométrie du bardage",
+      "max_width": null
+    }
+  ],
+  "schemas_layout": null,
+  "schemas_align_height": null,
+  "schemas_hide_caption": false,
+  "schemas_after_gallery": false,
+  "schemas_side_file": null,
+  "plans": [
+    {
+      "file": "fjt_plan.jpg",
+      "label": "Plan — conservé / démoli / créé",
+      "max_width": null
+    }
+  ],
+  "cats": [
+    "renovations"
+  ],
+  "slug": "fjt-kerizac"
+}

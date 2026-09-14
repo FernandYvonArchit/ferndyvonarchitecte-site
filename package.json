@@ -1,0 +1,9 @@
+{
+  "name": "site-fernand-yvon",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site vitrine de l'agence Fernand Yvon Architectes — généré à partir des fichiers du dossier content/.",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

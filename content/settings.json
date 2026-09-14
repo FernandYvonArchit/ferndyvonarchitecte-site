@@ -1,0 +1,25 @@
+{
+  "site_name": "Fernand Yvon Architectes",
+  "address_line1": "15 avenue du Clos Jaunet",
+  "address_line2": "44100 Nantes",
+  "email": "contact@fernandyvon.fr",
+  "phone": "06 01 13 67 00",
+  "instagram_url": "https://www.instagram.com/fernand_yvon/",
+  "footer_note": "Extensions — Rénovations — Logements collectifs — Études urbaines",
+  "tagline": "Économie de projet, prodigalité de conception.",
+  "about1_title": "Transversalité",
+  "about1_text": "Du mobilier d’une école maternelle à Guéméné-Penfao à la coordination urbaine du CHRU de Brest, un même regard porté sur la diversité des échelles et des savoirs.",
+  "about2_title": "Contexte",
+  "about2_text": "Lieu, maître d’ouvrage, paysage, histoire : ces conditions donnent corps au projet et se construisent avec l’ensemble des acteurs — élus, riverains, habitants — dès l’esquisse.",
+  "about3_title": "Usages",
+  "about3_text": "La réussite d’un logement tient à la qualité de ses usages, pas à sa plasticité. Quelques singularités qui en témoignent :",
+  "about3_list": [
+    "La « faille habitée » à Bagneux",
+    "Les « zones de rencontre » de la Sittelle",
+    "Les « pignons actifs » à Sulniac"
+  ],
+  "about4_title": "Frugalité",
+  "about4_text": "Une architecture durable se construit avec les moyens du projet — ensoleillement, ventilation naturelle, matériaux et savoir-faire locaux — plutôt que par des ajouts.",
+  "logo_mark_file": "logo_mark_full.png",
+  "logo_wordmark_file": "logo_wordmark_full.png"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "cafepecheur",
+  "name": "Café Pêcheur",
+  "code": "CAF",
+  "categorie_texte": "Extension",
+  "commune": "",
+  "intro": "Fiche en cours de constitution.",
+  "span": "md",
+  "specs": [],
+  "gallery": [
+    {
+      "file": "cafe_axo.jpg",
+      "featured": false
+    }
+  ],
+  "tile_file": "cafe_courtyard.jpg",
+  "schemas": [],
+  "schemas_layout": null,
+  "schemas_align_height": null,
+  "schemas_hide_caption": false,
+  "schemas_after_gallery": false,
+  "schemas_side_file": null,
+  "plans": [],
+  "cats": [
+    "extensions"
+  ],
+  "slug": "cafe-pecheur"
+}
