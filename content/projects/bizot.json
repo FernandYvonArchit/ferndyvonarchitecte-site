@@ -1,10 +1,12 @@
 {
-  "id": "bizot",
   "name": "Bizot",
   "code": "BIZ",
   "categorie_texte": "Rénovation",
-  "commune": "",
   "intro": "Surélévation et rénovation d’une maison familiale.",
+  "cats": [
+    "renovations",
+    "extensions"
+  ],
   "span": "md",
   "specs": [
     {
@@ -12,17 +14,14 @@
       "value": "Logement individuel — surélévation / rénovation"
     }
   ],
-  "gallery": [],
-  "tile_file": null,
-  "schemas": [],
-  "schemas_layout": null,
-  "schemas_align_height": null,
+  "gallery": [
+    {
+      "file": "/images/INSERTION5.jpg",
+      "featured": false
+    }
+  ],
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
-  "plans": [],
-  "cats": [
-    "renovations"
-  ],
+  "id": "bizot",
   "slug": "bizot"
 }
