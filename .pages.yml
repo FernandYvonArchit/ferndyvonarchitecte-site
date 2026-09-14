@@ -88,6 +88,7 @@ content:
     label: "Projets"
     type: collection
     path: content/projects
+    extension: json
     format: json
     view:
       primary: name
