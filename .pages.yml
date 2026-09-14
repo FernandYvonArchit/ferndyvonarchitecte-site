@@ -91,7 +91,6 @@ content:
     format: json
     view:
       primary: name
-      secondary: categorie_texte
       fields: [code, commune]
     fields:
       - name: name
