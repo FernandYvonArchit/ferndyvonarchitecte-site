@@ -1,0 +1,252 @@
+media: images
+
+content:
+  - name: settings
+    label: "Réglages du site"
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - name: site_name
+        label: "Nom du site"
+        type: string
+      - name: logo_mark_file
+        label: "Logo — symbole (icône seule)"
+        type: image
+      - name: logo_wordmark_file
+        label: "Logo — texte complet"
+        type: image
+      - name: address_line1
+        label: "Adresse — ligne 1"
+        type: string
+      - name: address_line2
+        label: "Adresse — ligne 2"
+        type: string
+      - name: email
+        label: "Email de contact"
+        type: string
+      - name: phone
+        label: "Téléphone"
+        type: string
+      - name: instagram_url
+        label: "Lien Instagram"
+        type: string
+      - name: footer_note
+        label: "Note en bas de page"
+        type: string
+      - name: tagline
+        label: "Phrase d'accroche (page d'accueil)"
+        type: string
+      - name: about1_title
+        label: "Agence — bloc 1 — titre"
+        type: string
+      - name: about1_text
+        label: "Agence — bloc 1 — texte"
+        type: text
+      - name: about2_title
+        label: "Agence — bloc 2 — titre"
+        type: string
+      - name: about2_text
+        label: "Agence — bloc 2 — texte"
+        type: text
+      - name: about3_title
+        label: "Agence — bloc 3 — titre"
+        type: string
+      - name: about3_text
+        label: "Agence — bloc 3 — texte"
+        type: text
+      - name: about3_list
+        label: "Agence — bloc 3 — liste à puces"
+        type: string
+        list: true
+      - name: about4_title
+        label: "Agence — bloc 4 — titre"
+        type: string
+      - name: about4_text
+        label: "Agence — bloc 4 — texte"
+        type: text
+
+  - name: categories
+    label: "Catégories (page d'accueil)"
+    type: file
+    path: content/categories.json
+    format: json
+    list: true
+    fields:
+      - name: key
+        label: "Identifiant (ne pas modifier)"
+        type: string
+        readonly: true
+      - name: label
+        label: "Nom affiché"
+        type: string
+      - name: file
+        label: "Photo de la vignette"
+        type: image
+
+  - name: projects
+    label: "Projets"
+    type: collection
+    path: content/projects
+    format: json
+    view:
+      primary: name
+      secondary: categorie_texte
+      fields: [code, commune]
+    fields:
+      - name: name
+        label: "Nom du projet"
+        type: string
+      - name: code
+        label: "Code (identifiant court)"
+        type: string
+      - name: categorie_texte
+        label: "Catégorie affichée sous le titre"
+        type: string
+      - name: commune
+        label: "Commune"
+        type: string
+      - name: intro
+        label: "Texte d'introduction"
+        type: text
+      - name: cats
+        label: "Catégories (filtre page d'accueil)"
+        type: select
+        options:
+          values:
+            - name: extensions
+              label: Extensions
+            - name: renovations
+              label: Rénovations
+            - name: collectifs
+              label: "Logements collectifs"
+            - name: etudes-urbaines
+              label: "Études urbaines"
+          multiple: true
+      - name: span
+        label: "Taille de la vignette (page d'accueil)"
+        type: select
+        options:
+          values:
+            - name: sm
+              label: "Petite"
+            - name: md
+              label: "Moyenne"
+            - name: lg
+              label: "Grande"
+      - name: tile_file
+        label: "Photo de la vignette (page d'accueil)"
+        type: image
+      - name: specs
+        label: "Fiche technique"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: "Intitulé"
+            type: string
+          - name: value
+            label: "Valeur"
+            type: string
+      - name: gallery
+        label: "Galerie photo"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Photo {index}"
+        fields:
+          - name: file
+            label: Photo
+            type: image
+          - name: featured
+            label: "Afficher en grand"
+            type: boolean
+      - name: schemas_layout
+        label: "Disposition des schémas"
+        type: select
+        options:
+          values:
+            - name: ""
+              label: "Standard (grille 2 colonnes)"
+            - name: compact
+              label: "Compacte (bande fine sur toute la largeur)"
+            - name: flat
+              label: "Sans bordure"
+            - name: aligned
+              label: "Alignés sur une même hauteur"
+            - name: side
+              label: "Petits schémas empilés + un grand à droite"
+      - name: schemas
+        label: "Schémas"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: file
+            label: Image
+            type: image
+          - name: label
+            label: Légende
+            type: string
+          - name: max_width
+            label: "Largeur max. en pixels (facultatif)"
+            type: number
+            required: false
+      - name: schemas_align_height
+        label: "Hauteur (px) — uniquement pour la disposition « Alignés »"
+        type: number
+        required: false
+      - name: schemas_hide_caption
+        label: "Masquer les légendes des schémas"
+        type: boolean
+      - name: schemas_after_gallery
+        label: "Afficher les schémas après la galerie photo (au lieu d'avant)"
+        type: boolean
+      - name: schemas_side_file
+        label: "Grande image — uniquement pour la disposition « Petits + un grand »"
+        type: image
+      - name: schemas_side_small_width
+        label: "Largeur (px) des petits schémas empilés — disposition « Petits + un grand »"
+        type: number
+        required: false
+      - name: plans_layout
+        label: "Disposition des plans"
+        type: select
+        options:
+          values:
+            - name: ""
+              label: "Standard (empilés, pleine largeur)"
+            - name: row
+              label: "Côte à côte, même taille"
+      - name: plans
+        label: "Plans"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: file
+            label: Image
+            type: image
+          - name: label
+            label: Légende
+            type: string
+          - name: max_width
+            label: "Largeur max. en pixels (facultatif)"
+            type: number
+            required: false
+      - name: id
+        label: "Identifiant technique (ne pas modifier)"
+        type: string
+        readonly: true
+      - name: slug
+        label: "Identifiant d'URL (ne pas modifier)"
+        type: string
+        readonly: true
