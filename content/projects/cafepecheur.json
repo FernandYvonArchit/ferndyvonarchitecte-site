@@ -1,28 +1,22 @@
 {
-  "id": "cafepecheur",
   "name": "Café Pêcheur",
   "code": "CAF",
   "categorie_texte": "Extension",
-  "commune": "",
-  "intro": "Fiche en cours de constitution.",
+  "commune": "Penerf - 56",
+  "intro": "Extension en rez-de-chaussée d'une maison de pêcheur",
+  "cats": [
+    "extensions"
+  ],
   "span": "md",
-  "specs": [],
+  "tile_file": "cafe_courtyard.jpg",
   "gallery": [
     {
       "file": "cafe_axo.jpg",
       "featured": false
     }
   ],
-  "tile_file": "cafe_courtyard.jpg",
-  "schemas": [],
-  "schemas_layout": null,
-  "schemas_align_height": null,
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
-  "plans": [],
-  "cats": [
-    "extensions"
-  ],
+  "id": "cafepecheur",
   "slug": "cafe-pecheur"
 }
