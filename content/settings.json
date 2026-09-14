@@ -1,5 +1,7 @@
 {
-  "site_name": "Fernand Yvon Architectes",
+  "site_name": "Fernand Yvon Architecte",
+  "logo_mark_file": "logo_mark_full.png",
+  "logo_wordmark_file": "logo_wordmark_full.png",
   "address_line1": "15 avenue du Clos Jaunet",
   "address_line2": "44100 Nantes",
   "email": "contact@fernandyvon.fr",
@@ -8,18 +10,11 @@
   "footer_note": "Extensions — Rénovations — Logements collectifs — Études urbaines",
   "tagline": "Économie de projet, prodigalité de conception.",
   "about1_title": "Transversalité",
-  "about1_text": "Du mobilier d’une école maternelle à Guéméné-Penfao à la coordination urbaine du CHRU de Brest, un même regard porté sur la diversité des échelles et des savoirs.",
-  "about2_title": "Contexte",
-  "about2_text": "Lieu, maître d’ouvrage, paysage, histoire : ces conditions donnent corps au projet et se construisent avec l’ensemble des acteurs — élus, riverains, habitants — dès l’esquisse.",
-  "about3_title": "Usages",
-  "about3_text": "La réussite d’un logement tient à la qualité de ses usages, pas à sa plasticité. Quelques singularités qui en témoignent :",
-  "about3_list": [
-    "La « faille habitée » à Bagneux",
-    "Les « zones de rencontre » de la Sittelle",
-    "Les « pignons actifs » à Sulniac"
-  ],
-  "about4_title": "Frugalité",
-  "about4_text": "Une architecture durable se construit avec les moyens du projet — ensoleillement, ventilation naturelle, matériaux et savoir-faire locaux — plutôt que par des ajouts.",
-  "logo_mark_file": "logo_mark_full.png",
-  "logo_wordmark_file": "logo_wordmark_full.png"
+  "about1_text": "Relier les échelles, de la ville au détail. Relier les usages aux espaces qui les accueillent. Relier l’existant à ce qui vient s’y inscrire. Relier les ambitions architecturales aux réalités économiques, techniques, sociales et environnementales.\nChaque projet est envisagé dans sa complexité, non comme une addition de contraintes, mais comme une matière de conception. La transversalité devient alors une méthode : faire dialoguer les enjeux pour produire une architecture cohérente, située et durable.",
+  "about2_title": "Mouvement",
+  "about2_text": "L’architecture est pensée à partir des usages, des mouvements, des habitudes et des transformations qui animent un lieu. Les volumes, les circulations et les matérialités ne constituent pas une fin en soi : ils créent les conditions d’une expérience.\nCette attention portée à l’usage s’accompagne d’une recherche constante autour du confort, en tirant parti de La lumière, de l’orientation, des variations saisonnières.\nL’espace évolue avec le temps et s’adapte à celles et ceux qui l’habitent.",
+  "about3_title": "Dialogue",
+  "about3_text": "Le dialogue entre les différents acteurs — maîtrise d’ouvrage, ingénieurs, entreprises, artisans et usagers — est au cœur du processus de conception. Cette implication se poursuit à chaque étape du projet afin de garantir une continuité entre l’intention initiale et sa réalisation.\nLa maquette, physique ou numérique, constitue un outil essentiel de compréhension et de partage. Elle permet de rendre le projet lisible, de questionner les choix et d’anticiper les situations.\nLe BIM s’inscrit dans cette même logique : faciliter la coordination, approfondir les sujets techniques et améliorer la qualité des échanges entre les différents intervenants.",
+  "about4_title": "Faire mieux plutôt que faire plus",
+  "about4_text": "Les enjeux économiques et environnementaux appellent une architecture capable de trouver son efficacité dans sa propre conception, plutôt que dans l’accumulation de dispositifs technologiques coûteux.\nCette recherche repose sur les fondamentaux de l’architecture : une orientation juste, une maîtrise des apports solaires, une gestion naturelle des flux d’air, l’attention portée aux ressources et aux savoir-faire locaux, la valorisation de l’existant et la rationalisation des systèmes constructifs.\nMettre davantage de matière grise dans la conception, c’est réduire la quantité de matière nécessaire à la construction. C’est faire de l’intelligence du projet sa première ressource.\nUne architecture attentive à son contexte, précise dans ses usages et exigeante dans ses moyens. Une architecture qui cherche moins à ajouter qu’à révéler."
 }
