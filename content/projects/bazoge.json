@@ -1,10 +1,12 @@
 {
-  "id": "bazoge",
   "name": "La Bazoge",
   "code": "BAZ",
   "categorie_texte": "Extension",
-  "commune": "La Bazoge",
+  "commune": "La Bazoge - 72",
   "intro": "Extension et rénovation d’une habitation à La Bazoge.",
+  "cats": [
+    "extensions"
+  ],
   "span": "md",
   "specs": [
     {
@@ -16,17 +18,8 @@
       "value": "La Bazoge"
     }
   ],
-  "gallery": [],
-  "tile_file": null,
-  "schemas": [],
-  "schemas_layout": null,
-  "schemas_align_height": null,
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
-  "plans": [],
-  "cats": [
-    "extensions"
-  ],
+  "id": "bazoge",
   "slug": "la-bazoge"
 }
