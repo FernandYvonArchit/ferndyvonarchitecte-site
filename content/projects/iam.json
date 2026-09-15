@@ -1,11 +1,15 @@
 {
-  "id": "iam",
   "name": "Île-aux-Moines",
   "code": "IAM",
   "categorie_texte": "Extension",
   "commune": "Île-aux-Moines — 56",
   "intro": "Extension et restructuration d’une maison de vacances. Une greffe en bois brut vient prolonger le pignon existant vers le jardin, ouvrant la cuisine et le séjour sur une terrasse abritée.",
+  "cats": [
+    "extensions"
+  ],
+  "ordre": 1,
   "span": "lg",
+  "tile_file": "iam_detail.jpg",
   "specs": [
     {
       "label": "Maître d’ouvrage",
@@ -36,55 +40,62 @@
       "value": "Livré (2024)"
     }
   ],
+  "gallery_flat": false,
   "gallery": [
     {
       "file": "iam_terrace.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "iam_facade.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "iam_kitchen.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "iam_doorway.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "iam_stair.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "iam_detail.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "iam_maquette1.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "iam_maquette2.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "iam_maquette3.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "iam_maquette4.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     }
   ],
-  "tile_file": "iam_detail.jpg",
-  "schemas": [],
-  "schemas_layout": null,
-  "schemas_align_height": null,
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
+  "plans_layout": "row",
   "plans": [
     {
       "file": "plan_iam_masse.jpg",
@@ -97,9 +108,6 @@
       "max_width": 460
     }
   ],
-  "cats": [
-    "extensions"
-  ],
-  "slug": "ile-aux-moines",
-  "plans_layout": "row"
+  "id": "iam",
+  "slug": "ile-aux-moines"
 }
