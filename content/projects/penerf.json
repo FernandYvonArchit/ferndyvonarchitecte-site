@@ -1,11 +1,15 @@
 {
-  "id": "penerf",
   "name": "Penerf",
   "code": "PEN",
   "categorie_texte": "Extension",
   "commune": "Penerf — 56",
   "intro": "Conversion d’un garage en habitation et création d’un cabinet de sophrologie et d’un atelier, à l’entrée du bourg de Penerf. Les constructions neuves, en bardage bois, se détachent de la maison ancienne sans la concurrencer.",
+  "cats": [
+    "extensions"
+  ],
+  "ordre": 7,
   "span": "md",
+  "tile_file": "penerf_axo.jpg",
   "specs": [
     {
       "label": "Maître d’ouvrage",
@@ -32,34 +36,29 @@
       "value": "Chantier en cours"
     }
   ],
+  "gallery_flat": false,
   "gallery": [
     {
       "file": "penerf_final.jpg",
-      "featured": true
-    }
-  ],
-  "tile_file": "penerf_axo.jpg",
-  "schemas": [
-    {
-      "file": "penerf_schema1.jpg",
-      "label": "Implantation et limites de propriété",
-      "max_width": null
-    },
-    {
-      "file": "penerf_schema2.jpg",
-      "label": "Implantation et limites de propriété",
-      "max_width": null
+      "featured": true,
+      "no_border": false
     }
   ],
   "schemas_layout": "side",
-  "schemas_align_height": null,
+  "schemas": [
+    {
+      "file": "penerf_schema1.jpg",
+      "label": "Implantation et limites de propriété"
+    },
+    {
+      "file": "penerf_schema2.jpg",
+      "label": "Implantation et limites de propriété"
+    }
+  ],
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
   "schemas_side_file": "penerf_axo.jpg",
   "schemas_side_small_width": 225,
-  "plans": [],
-  "cats": [
-    "extensions"
-  ],
+  "id": "penerf",
   "slug": "penerf"
 }
