@@ -68,13 +68,6 @@
       "no_border": false
     },
     {
-      "file": "sul_axo.jpg",
-      "featured": false,
-      "no_border": true,
-      "ratio": "0.75",
-      "fit": "contain"
-    },
-    {
       "file": "sul_hero.jpg",
       "featured": false,
       "no_border": false
@@ -83,6 +76,13 @@
       "file": "sul_detail.jpg",
       "featured": false,
       "no_border": false
+    },
+    {
+      "file": "sul_axo.jpg",
+      "featured": false,
+      "no_border": true,
+      "ratio": "0.75",
+      "fit": "contain"
     }
   ],
   "schemas_layout": "compact",
