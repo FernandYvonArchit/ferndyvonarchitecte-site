@@ -37,7 +37,7 @@
     },
     {
       "label": "Avancement",
-      "value": "DET en cours"
+      "value": "Livré en juin 2026"
     }
   ],
   "gallery_flat": false,
@@ -104,7 +104,7 @@
       "label": "…Et offrent des espaces extérieurs généreux à tous les niveaux"
     }
   ],
-  "schemas_hide_caption": true,
+  "schemas_hide_caption": false,
   "schemas_after_gallery": false,
   "plans": [
     {
