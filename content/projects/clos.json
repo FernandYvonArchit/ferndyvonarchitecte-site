@@ -1,11 +1,15 @@
 {
-  "id": "clos",
   "name": "Clos Jaunet",
   "code": "CLOJ",
   "categorie_texte": "Rénovation",
   "commune": "Nantes — 44",
   "intro": "Rénovation, extension et surélévation d’une maison de famille en cœur d’îlot. Le volume ajouté en zinc dialogue avec la pierre existante sans chercher à l’imiter.",
+  "cats": [
+    "renovations"
+  ],
+  "ordre": 6,
   "span": "md",
+  "tile_file": "clos_jaunet.jpg",
   "specs": [
     {
       "label": "Type",
@@ -28,30 +32,26 @@
       "value": "Juillet 2023"
     }
   ],
+  "gallery_flat": false,
   "gallery": [
     {
       "file": "clos_interior.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "grid_clos.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "clos_kitchen.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     }
   ],
-  "tile_file": "clos_jaunet.jpg",
-  "schemas": [],
-  "schemas_layout": null,
-  "schemas_align_height": null,
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
-  "plans": [],
-  "cats": [
-    "renovations"
-  ],
+  "id": "clos",
   "slug": "clos-jaunet"
 }
