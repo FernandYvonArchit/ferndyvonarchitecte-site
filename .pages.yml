@@ -34,6 +34,9 @@ content:
       - name: footer_note
         label: "Note en bas de page"
         type: string
+      - name: contact_plan_file
+        label: "Plan de situation (contact) — affiché en noir et blanc automatiquement"
+        type: image
       - name: tagline
         label: "Phrase d'accroche (page d'accueil)"
         type: string
@@ -88,8 +91,8 @@ content:
     label: "Projets"
     type: collection
     path: content/projects
-    extension: json
     format: json
+    extension: json
     view:
       primary: name
       fields: [code, commune]
@@ -123,6 +126,10 @@ content:
             - name: etudes-urbaines
               label: "Études urbaines"
           multiple: true
+      - name: ordre
+        label: "Ordre d'affichage (page d'accueil) — petit nombre = en premier. Laisser vide pour un tri automatique."
+        type: number
+        required: false
       - name: span
         label: "Taille de la vignette (page d'accueil)"
         type: select
@@ -151,6 +158,9 @@ content:
           - name: value
             label: "Valeur"
             type: string
+      - name: gallery_flat
+        label: "Retirer le cadre de toutes les photos de la galerie"
+        type: boolean
       - name: gallery
         label: "Galerie photo"
         type: object
@@ -163,8 +173,25 @@ content:
             label: Photo
             type: image
           - name: featured
-            label: "Afficher en grand"
+            label: "Afficher en grand (pleine largeur)"
             type: boolean
+          - name: no_border
+            label: "Retirer le cadre de cette photo"
+            type: boolean
+          - name: ratio
+            label: "Proportion forcée (optionnel, ex: 1.5 ou 0.75) — pour agrandir/recadrer cette photo"
+            type: string
+            required: false
+          - name: fit
+            label: "Cadrage (utile seulement si une proportion est indiquée ci-dessus)"
+            type: select
+            required: false
+            options:
+              values:
+                - name: cover
+                  label: "Rogner pour remplir (par défaut)"
+                - name: contain
+                  label: "Ne pas rogner (garde tout le contenu, ajoute un peu de marge)"
       - name: schemas_layout
         label: "Disposition des schémas"
         type: select
