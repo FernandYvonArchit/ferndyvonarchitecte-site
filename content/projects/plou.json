@@ -1,11 +1,15 @@
 {
-  "id": "plou",
   "name": "Plouharneux",
   "code": "PLOU",
   "categorie_texte": "Extension",
   "commune": "Damgan — 56",
   "intro": "Extension et rénovation d’une maison des années 1930, impasse de Plouharneux. Une circulation en enfilade, orientée au sud, relie l’extension à l’existant jusqu’à une terrasse à l’ouest.",
+  "cats": [
+    "extensions"
+  ],
+  "ordre": 3,
   "span": "md",
+  "tile_file": "plou_old_tile.jpg",
   "specs": [
     {
       "label": "Maître d’ouvrage",
@@ -36,27 +40,26 @@
       "value": "Livré (2024)"
     }
   ],
+  "gallery_flat": false,
   "gallery": [
     {
       "file": "plou_new1.jpg",
-      "featured": true
+      "featured": true,
+      "no_border": false
     },
     {
       "file": "plou_new2.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "plou_new3.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     }
   ],
-  "tile_file": "plou_old_tile.jpg",
-  "schemas": [],
-  "schemas_layout": null,
-  "schemas_align_height": null,
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
   "plans": [
     {
       "file": "plan_plou_rdc.jpg",
@@ -65,12 +68,9 @@
     },
     {
       "file": "plou_facades.jpg",
-      "label": "Façades est et sud",
-      "max_width": null
+      "label": "Façades est et sud"
     }
   ],
-  "cats": [
-    "extensions"
-  ],
+  "id": "plou",
   "slug": "plouharneux"
 }
