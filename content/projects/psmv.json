@@ -1,11 +1,15 @@
 {
-  "id": "psmv",
   "name": "PSMV",
   "code": "PSMV",
   "categorie_texte": "Rénovation",
   "commune": "Nantes — 44",
   "intro": "Rénovation d’une façade en pierre de taille, en périmètre sauvegardé, à Nantes.",
+  "cats": [
+    "renovations"
+  ],
+  "ordre": 10,
   "span": "md",
+  "tile_file": "psmv_facade.jpg",
   "specs": [
     {
       "label": "Type",
@@ -24,33 +28,28 @@
       "value": "Complète + OPC"
     }
   ],
+  "gallery_flat": false,
   "gallery": [
     {
       "file": "psmv_facade.jpg",
-      "featured": false
-    }
-  ],
-  "tile_file": "psmv_facade.jpg",
-  "schemas": [
-    {
-      "file": "psmv_diag.jpg",
-      "label": "Diagnostic des façades — pathologies et menuiseries",
-      "max_width": null
-    },
-    {
-      "file": "psmv_zones.jpg",
-      "label": "Repérage des zones d’intervention",
-      "max_width": null
+      "featured": false,
+      "no_border": false
     }
   ],
   "schemas_layout": "aligned",
+  "schemas": [
+    {
+      "file": "psmv_diag.jpg",
+      "label": "Diagnostic des façades — pathologies et menuiseries"
+    },
+    {
+      "file": "psmv_zones.jpg",
+      "label": "Repérage des zones d’intervention"
+    }
+  ],
   "schemas_align_height": 340,
   "schemas_hide_caption": true,
   "schemas_after_gallery": true,
-  "schemas_side_file": null,
-  "plans": [],
-  "cats": [
-    "renovations"
-  ],
+  "id": "psmv",
   "slug": "psmv"
 }
