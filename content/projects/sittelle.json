@@ -42,6 +42,7 @@
       "featured": false
     }
   ],
+  "gallery_flat": true,
   "tile_file": "sit_tile.jpg",
   "schemas": [
     {
@@ -51,7 +52,7 @@
     },
     {
       "file": "sit_facades.jpg",
-      "label": "Façades sud",
+      "label": "",
       "max_width": null
     }
   ],
@@ -64,14 +65,15 @@
     {
       "file": "sit_masse_new.jpg",
       "label": "Plan masse",
-      "max_width": null
+      "max_width": 380
     },
     {
       "file": "sit_plan_etages.jpg",
       "label": "Plans des étages",
-      "max_width": null
+      "max_width": 380
     }
   ],
+  "plans_layout": "row",
   "cats": [
     "collectifs"
   ],

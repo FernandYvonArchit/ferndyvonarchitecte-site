@@ -1,14 +1,11 @@
 {
+  "id": "sulniac",
   "name": "Sulniac",
   "code": "SUL",
   "categorie_texte": "13 logements locatifs sociaux",
   "commune": "Sulniac — 56",
-  "intro": "Treize logements locatifs sociaux organisés autour d'un cœur d'îlot, chacun ouvert sur une terrasse ou un jardin privatif. Une écriture de toitures en pignon qui reprend le parcellaire du bourg.",
-  "cats": [
-    "collectifs"
-  ],
+  "intro": "Treize logements locatifs sociaux organisés autour de venelles plantées, chacun ouvert sur une terrasse ou un jardin privatif. Une écriture de toitures en pignon qui reprend le parcellaire du bourg.",
   "span": "lg",
-  "tile_file": "sul_axo.jpg",
   "specs": [
     {
       "label": "Maître d’ouvrage",
@@ -62,7 +59,9 @@
     },
     {
       "file": "sul_axo.jpg",
-      "featured": false
+      "featured": false,
+      "ratio": "0.75",
+      "fit": "contain"
     },
     {
       "file": "sul_hero.jpg",
@@ -73,41 +72,53 @@
       "featured": false
     }
   ],
-  "schemas_layout": "compact",
+  "tile_file": "sul_axo.jpg",
   "schemas": [
     {
       "file": "sul_schema1.jpg",
-      "label": "Un programme dense sur une parcelle en forte pente"
+      "label": "Un programme dense sur une parcelle en forte pente",
+      "max_width": null
     },
     {
       "file": "sul_schema2.jpg",
-      "label": "Des gabarits faisant écho aux typologies traditionnelles bretonnes (la longée et l’annexe en monopente)"
+      "label": "Des gabarits faisant écho aux typologies traditionnelles bretonnes (la longée et l’annexe en monopente)",
+      "max_width": null
     },
     {
       "file": "sul_schema3.jpg",
-      "label": "Des volumes intermédiaires qui affirment les gabarits…"
+      "label": "Des volumes intermédiaires qui affirment les gabarits…",
+      "max_width": null
     },
     {
       "file": "sul_schema4.jpg",
-      "label": "…Et offrent des espaces extérieurs généreux à tous les niveaux"
+      "label": "…Et offrent des espaces extérieurs généreux à tous les niveaux",
+      "max_width": null
     }
   ],
+  "schemas_layout": "compact",
+  "schemas_align_height": null,
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
+  "schemas_side_file": null,
   "plans": [
     {
       "file": "plan_sul_masse.jpg",
-      "label": "Plan de masse"
+      "label": "Plan de masse",
+      "max_width": null
     },
     {
       "file": "plan_sul_rdc.jpg",
-      "label": "Plan du rez-de-chaussée"
+      "label": "Plan du rez-de-chaussée",
+      "max_width": null
     },
     {
       "file": "plan_sul_r1.jpg",
-      "label": "Plan du R+1"
+      "label": "Plan du R+1",
+      "max_width": null
     }
   ],
-  "id": "sulniac",
+  "cats": [
+    "collectifs"
+  ],
   "slug": "sulniac"
 }

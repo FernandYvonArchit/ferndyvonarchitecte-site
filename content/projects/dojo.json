@@ -47,7 +47,8 @@
     },
     {
       "file": "dojo_g3.jpg",
-      "featured": false
+      "featured": false,
+      "ratio": "1.5"
     }
   ],
   "tile_file": "grid_dojo.jpg",
@@ -55,12 +56,12 @@
     {
       "file": "dojo_detail.jpg",
       "label": "Détail de bardage bois en couronnement",
-      "max_width": 260
+      "max_width": 312
     }
   ],
   "schemas_layout": null,
   "schemas_align_height": null,
-  "schemas_hide_caption": false,
+  "schemas_hide_caption": true,
   "schemas_after_gallery": true,
   "schemas_side_file": null,
   "plans": [],

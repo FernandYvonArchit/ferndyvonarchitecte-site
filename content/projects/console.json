@@ -39,7 +39,10 @@
   "gallery": [
     {
       "file": "console_axo.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": true,
+      "ratio": "1",
+      "fit": "contain"
     },
     {
       "file": "console_truss2.jpg",
@@ -95,9 +98,10 @@
     {
       "file": "plan_console_rdc.jpg",
       "label": "Plan du rez-de-chaussée et de l’étage",
-      "max_width": null
+      "max_width": 700
     }
   ],
+  "plans_layout": "row",
   "cats": [
     "extensions"
   ],
