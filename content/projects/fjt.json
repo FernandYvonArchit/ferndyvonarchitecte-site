@@ -1,11 +1,15 @@
 {
-  "id": "fjt",
   "name": "FJT Kerizac",
   "code": "FJT",
   "categorie_texte": "Rénovation",
   "commune": "Vannes — 56",
   "intro": "Réorganisation des locaux administratifs et communs et recomposition des façades avec isolation thermique par l’extérieur, pour le Foyer de Jeunes Travailleurs Kerizac à Vannes. Un maximum d’éléments existants sont conservés.",
+  "cats": [
+    "renovations"
+  ],
+  "ordre": 8,
   "span": "md",
+  "tile_file": "fjt_tile.jpg",
   "specs": [
     {
       "label": "Maître d’ouvrage",
@@ -32,43 +36,37 @@
       "value": "ESQ + AVP + PRO"
     }
   ],
+  "gallery_flat": false,
   "gallery": [
     {
       "file": "fjt_facade1.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "fjt_facade2.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     }
   ],
-  "tile_file": "fjt_tile.jpg",
   "schemas": [
     {
       "file": "fjt_detail1.jpg",
-      "label": "Détail de menuiserie en applique",
-      "max_width": null
+      "label": "Détail de menuiserie en applique"
     },
     {
       "file": "fjt_detail2.jpg",
-      "label": "Axonométrie du bardage",
-      "max_width": null
+      "label": "Axonométrie du bardage"
     }
   ],
-  "schemas_layout": null,
-  "schemas_align_height": null,
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
   "plans": [
     {
       "file": "fjt_plan.jpg",
-      "label": "Plan — conservé / démoli / créé",
-      "max_width": null
+      "label": "Plan — conservé / démoli / créé"
     }
   ],
-  "cats": [
-    "renovations"
-  ],
+  "id": "fjt",
   "slug": "fjt-kerizac"
 }
