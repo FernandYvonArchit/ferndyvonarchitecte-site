@@ -8,12 +8,12 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
- 
+
 const ROOT = __dirname;
 const CONTENT = path.join(ROOT, 'content');
 const SRC = path.join(ROOT, 'src');
 const DIST = path.join(ROOT, 'dist');
- 
+
 // ---------- utilitaires ----------
 function readJSON(p) { return JSON.parse(fs.readFileSync(p, 'utf8')); }
 function esc(s) {
@@ -35,7 +35,7 @@ function slugify(s) {
     .normalize('NFKD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-zA-Z0-9]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase();
 }
- 
+
 // ---------- contenu ----------
 const settings = readJSON(path.join(CONTENT, 'settings.json'));
 const categories = readJSON(path.join(CONTENT, 'categories.json'));
@@ -44,7 +44,7 @@ const projectsDir = path.join(CONTENT, 'projects');
 const projects = fs.readdirSync(projectsDir)
   .filter((f) => f.endsWith('.json'))
   .map((f) => readJSON(path.join(projectsDir, f)));
- 
+
 function setting(key) { return settings[key] || ''; }
 /** Normalise une valeur d'image venant de Pages CMS ("/images/x.jpg",
  *  "images/x.jpg" ou juste "x.jpg") vers le simple nom de fichier. */
@@ -64,7 +64,7 @@ function imgSrc(file) {
 }
 function projectUrl(p) { return '/projet/' + p.slug + '/'; }
 function categoryUrl(cat) { return '/categorie/' + cat.key + '/'; }
- 
+
 // ---------- ordre des catégories (identique au site d'origine) ----------
 function orderedCategories() {
   const preferred = ['extensions', 'renovations', 'collectifs', 'etudes-urbaines'];
@@ -75,7 +75,7 @@ function orderedCategories() {
   Object.values(byKey).forEach((c) => ordered.push(c));
   return ordered;
 }
- 
+
 // ---------- score de contenu (pour faire remonter les fiches les plus riches) ----------
 function contentScore(p) {
   let score = 0;
@@ -84,7 +84,7 @@ function contentScore(p) {
   if (Array.isArray(p.plans)) score += p.plans.length;
   return score;
 }
- 
+
 // ---------- masonry (répartition en 3 colonnes équilibrées) ----------
 function estimatedTileHeight(p) {
   const tileFile = p.tile_file || (p.gallery && p.gallery[0] && p.gallery[0].file);
@@ -104,17 +104,23 @@ function buildMasonry(list, cols = 3) {
   });
   return columns;
 }
+function hasOrdre(p) { return typeof p.ordre === 'number' && !Number.isNaN(p.ordre); }
 function sortedByContent(list) {
-  return [...list].sort((a, b) => contentScore(b) - contentScore(a));
+  const ordered = list.filter(hasOrdre).sort((a, b) => a.ordre - b.ordre);
+  const rest = list.filter((p) => !hasOrdre(p)).sort((a, b) => contentScore(b) - contentScore(a));
+  return [...ordered, ...rest];
 }
- 
+// Ordre canonique des projets (identique à l'ordre affiché sur la page
+// d'accueil) — sert aussi à déterminer le « projet suivant » sur chaque fiche.
+const homepageOrder = sortedByContent(projects);
+
 // ---------- fragments HTML ----------
 function projectCard(p) {
   const span = p.span || 'md';
   const loc = p.commune ? p.commune + ' — ' + p.categorie_texte : p.categorie_texte;
   const catsAttr = (p.cats || []).join(' ');
   const tileFile = p.tile_file || (p.gallery && p.gallery[0] && p.gallery[0].file);
- 
+
   if (!tileFile) {
     return `<a class="tile tile--${esc(span)} tile--text" href="${projectUrl(p)}" data-cat="${esc(catsAttr)}">
   <div class="tile-text-body">
@@ -140,35 +146,37 @@ function projectCard(p) {
   </div>
 </a>`;
 }
- 
+
 function categoryTile(cat) {
   return `<a class="cat" href="${categoryUrl(cat)}">
   <div class="cat-frame" style="aspect-ratio: 0.75"><img src="${imgSrc(cat.file)}" alt="${esc(cat.label)}" loading="lazy"></div>
   <h3>${esc(cat.label)}</h3>
 </a>`;
 }
- 
+
 function specsHtml(specs) {
   return (specs || [])
     .filter((r) => r.label || r.value)
     .map((r) => `<div class="spec-row"><dt>${esc(r.label)}</dt><dd>${esc(r.value)}</dd></div>`)
     .join('\n');
 }
- 
-function galItem(file, alt, featured) {
+
+function galItem(file, alt, featured, ratioOverride, fit, noBorder) {
   if (!file) return '';
   const [w, h] = imgWH(file);
-  const cls = featured ? 'gal-item gal-item--wide' : 'gal-item';
-  return `<div class="${cls}"><img src="${imgSrc(file)}" alt="${esc(alt)}" loading="lazy" style="aspect-ratio:${w}/${h}"></div>`;
+  const ratio = ratioOverride ? ratioOverride : `${w}/${h}`;
+  const cls = 'gal-item' + (featured ? ' gal-item--wide' : '') + (noBorder ? ' gal-item--flat' : '');
+  const fitStyle = fit === 'contain' ? ' object-fit:contain; background:#fff;' : '';
+  return `<div class="${cls}"><img src="${imgSrc(file)}" alt="${esc(alt)}" loading="lazy" style="aspect-ratio:${ratio};${fitStyle}"></div>`;
 }
- 
+
 function planItem(file, label, maxWidth) {
   if (!file) return '';
   const [w, h] = imgWH(file);
   const wrap = maxWidth ? ` style="max-width:${maxWidth}px; margin:0 auto"` : '';
   return `<figure class="plan-item"${wrap}><img src="${imgSrc(file)}" alt="${esc(label)}" loading="lazy" style="aspect-ratio:${w}/${h}"><figcaption>${esc(label)}</figcaption></figure>`;
 }
- 
+
 function schemaItem(file, label, wide, caption, maxWidth) {
   if (!file) return '';
   const [w, h] = imgWH(file);
@@ -177,7 +185,7 @@ function schemaItem(file, label, wide, caption, maxWidth) {
   const cap = caption ? `<figcaption>${esc(label)}</figcaption>` : '';
   return `<figure class="${cls}"${wrap}><img src="${imgSrc(file)}" alt="${esc(label)}" loading="lazy" style="aspect-ratio:${w}/${h}">${cap}</figure>`;
 }
- 
+
 /** Bloc galerie / schémas / plans complet d'une fiche projet. */
 function projectMediaHtml(p) {
   // --- Galerie ---
@@ -185,15 +193,16 @@ function projectMediaHtml(p) {
   let gal = '';
   if (gallery.length) {
     const forceWide = gallery.length === 1;
-    const imgs = gallery.map((g) => galItem(g.file, p.name, forceWide || !!g.featured)).join('');
-    gal = `<div class="proj-gallery">${imgs}</div>`;
+    const imgs = gallery.map((g) => galItem(g.file, p.name, forceWide || !!g.featured, g.ratio, g.fit, !!g.no_border)).join('');
+    const galCls = 'proj-gallery' + (p.gallery_flat ? ' proj-gallery--flat' : '');
+    gal = `<div class="${galCls}">${imgs}</div>`;
   }
- 
+
   // --- Schémas ---
   const schemasRaw = p.schemas || [];
   const layout = p.schemas_layout;
   let schemas = '';
- 
+
   if (schemasRaw.length && layout === 'side') {
     // Largeur fixe des petits schémas empilés à gauche ; la grande image à
     // droite est mise à une hauteur EXACTE égale à la somme de leurs
@@ -224,13 +233,14 @@ function projectMediaHtml(p) {
   } else if (schemasRaw.length) {
     const compact = layout === 'compact';
     const flat = layout === 'flat';
-    const items = schemasRaw.map((s) => s.file ? schemaItem(s.file, s.label, false, !(compact || flat), s.max_width) : '').join('');
+    const hideCaption = !!p.schemas_hide_caption;
+    const items = schemasRaw.map((s) => s.file ? schemaItem(s.file, s.label, false, !(compact || flat) && !hideCaption, s.max_width) : '').join('');
     let gridCls = 'schemas-grid';
     if (compact) gridCls += ' schemas-grid--compact';
     else if (flat) gridCls += ' schemas-grid--flat';
     schemas = `<div class="schemas-section"><h2 class="plans-heading">Principe</h2><div class="${gridCls}">${items}</div></div>`;
   }
- 
+
   // --- Plans ---
   const plansRaw = p.plans || [];
   let plans = '';
@@ -239,13 +249,13 @@ function projectMediaHtml(p) {
     const gridCls = p.plans_layout === 'row' ? 'plans-grid plans-grid--row' : 'plans-grid';
     plans = `<div class="plans-section"><h2 class="plans-heading">Plans</h2><div class="${gridCls}">${items}</div></div>`;
   }
- 
+
   const afterGallery = !!p.schemas_after_gallery;
   const first = afterGallery ? gal : schemas;
   const second = afterGallery ? schemas : gal;
   return `<div class="proj-media">${first}${second}${plans}</div>`;
 }
- 
+
 // ---------- gabarit de page (header/footer communs) ----------
 function page(title, bodyHtml, opts = {}) {
   const logoMark = setting('logo_mark_file');
@@ -253,7 +263,7 @@ function page(title, bodyHtml, opts = {}) {
   const insta = setting('instagram_url');
   const phone = setting('phone');
   const siteName = setting('site_name') || 'Fernand Yvon Architectes';
- 
+
   return `<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -316,6 +326,7 @@ ${bodyHtml}
       </div>
     </div>
     <p class="footer-note">${esc(setting('footer_note'))}</p>
+    ${setting('contact_plan_file') ? `<div class="footer-plan"><img src="${imgSrc(setting('contact_plan_file'))}" alt="Plan de situation — ${esc(setting('address_line1'))} ${esc(setting('address_line2'))}" loading="lazy"></div>` : ''}
   </div>
 </footer>
 <script src="/main.js"></script>
@@ -323,13 +334,13 @@ ${bodyHtml}
 </html>
 `;
 }
- 
+
 // ---------- page d'accueil ----------
 function renderGrid(list) {
   const columns = buildMasonry(sortedByContent(list), 3);
   return `<div class="grid">${columns.map((col) => `<div class="grid-col">${col.map(projectCard).join('')}</div>`).join('')}</div>`;
 }
- 
+
 function homeBody() {
   const cats = orderedCategories();
   return `<section id="view-home">
@@ -360,11 +371,11 @@ function homeBody() {
         <p>${esc(setting('about4_text'))}</p>
       </div></div>
     </div>
-    <p class="about-tagline">« ${esc(setting('tagline'))} »</p>
+    ${setting('tagline') ? `<p class="about-tagline">« ${esc(setting('tagline'))} »</p>` : ''}
   </div>
 </section>`;
 }
- 
+
 // ---------- pages catégorie ----------
 function categoryBody(cat) {
   const list = projects.filter((p) => (p.cats || []).includes(cat.key));
@@ -377,7 +388,23 @@ function categoryBody(cat) {
   ${list.length ? `<div class="shell" id="realisations">${renderGrid(list)}</div>` : ''}
 </section>`;
 }
- 
+
+/** Lien vers le projet suivant (dans l'ordre de la page d'accueil), pour
+ *  naviguer de projet en projet sans repasser par l'accueil. */
+function nextProjectHtml(p) {
+  const order = homepageOrder;
+  if (order.length < 2) return '';
+  const idx = order.findIndex((x) => x.slug === p.slug);
+  if (idx === -1) return '';
+  const next = order[(idx + 1) % order.length];
+  return `<div class="proj-next">
+    <a class="proj-next-link" href="${projectUrl(next)}">
+      <span class="proj-next-label">Projet suivant</span>
+      <span class="proj-next-name">${esc(next.name)} →</span>
+    </a>
+  </div>`;
+}
+
 // ---------- page projet ----------
 function projectBody(p) {
   return `<article class="proj" data-view="${esc(p.slug)}">
@@ -392,16 +419,18 @@ function projectBody(p) {
       </dl>
     </div>
     ${projectMediaHtml(p)}
+    ${nextProjectHtml(p)}
   </div>
 </article>`;
 }
- 
+
 /** Rassemble tous les noms de fichiers image référencés par le contenu
  *  (galeries, schémas, plans, vignettes, logos, catégories...). */
 function referencedImageFiles() {
   const names = new Set(Object.keys(imagesMeta));
   if (settings.logo_mark_file) names.add(baseFile(settings.logo_mark_file));
   if (settings.logo_wordmark_file) names.add(baseFile(settings.logo_wordmark_file));
+  if (settings.contact_plan_file) names.add(baseFile(settings.contact_plan_file));
   categories.forEach((c) => { if (c.file) names.add(baseFile(c.file)); });
   projects.forEach((p) => {
     if (p.tile_file) names.add(baseFile(p.tile_file));
@@ -413,7 +442,7 @@ function referencedImageFiles() {
   names.delete('');
   return [...names];
 }
- 
+
 /** Copie chaque image référencée vers dist/images/, en la cherchant soit
  *  dans un dossier images/ à la racine du dépôt, soit directement à la
  *  racine du dépôt (au cas où l'upload GitHub n'a pas conservé le
@@ -437,35 +466,34 @@ function copyReferencedImages() {
   });
   console.log(`${referencedImageFiles().length - missing} image(s) copiée(s)${missing ? `, ${missing} manquante(s)` : ''}.`);
 }
- 
+
 // ---------- construction ----------
 function build() {
   if (fs.existsSync(DIST)) fs.rmSync(DIST, { recursive: true, force: true });
   mkdirp(DIST);
- 
+
   // Assets statiques
   copyReferencedImages();
   fs.copyFileSync(path.join(SRC, 'style.css'), path.join(DIST, 'style.css'));
   fs.copyFileSync(path.join(SRC, 'main.js'), path.join(DIST, 'main.js'));
- 
+
   // Accueil
   writeFile(path.join(DIST, 'index.html'), page(setting('site_name') || 'Fernand Yvon Architectes', homeBody()));
- 
+
   // Catégories
   orderedCategories().forEach((cat) => {
     writeFile(path.join(DIST, 'categorie', cat.key, 'index.html'), page(`${cat.label} — Fernand Yvon Architectes`, categoryBody(cat)));
   });
- 
+
   // Projets
   projects.forEach((p) => {
     writeFile(path.join(DIST, 'projet', p.slug, 'index.html'), page(`${p.name} — Fernand Yvon Architectes`, projectBody(p)));
   });
- 
+
   // Page 404 simple
   writeFile(path.join(DIST, '404.html'), page('Page introuvable — Fernand Yvon Architectes', `<section class="shell" style="padding:120px 0; text-align:center;"><h1>Page introuvable</h1><p><a class="back-link" href="/">← Retour à l'accueil</a></p></section>`));
- 
+
   console.log(`Site généré dans dist/ (${projects.length} projets, ${orderedCategories().length} catégories).`);
 }
- 
+
 build();
- 
