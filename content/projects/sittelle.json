@@ -1,11 +1,15 @@
 {
-  "id": "sittelle",
   "name": "Sittelle",
   "code": "SIT",
   "categorie_texte": "Logements collectifs",
   "commune": "Vannes — 56",
   "intro": "Étude pour la construction de 25 logements Adapei, 28 logements locatifs sociaux et 12 logements en bail réel solidaire, organisés autour de plusieurs « zones de rencontre » paysagères à Vannes.",
+  "cats": [
+    "collectifs"
+  ],
+  "ordre": 9,
   "span": "md",
+  "tile_file": "sit_tile.jpg",
   "specs": [
     {
       "label": "Maître d’ouvrage",
@@ -32,35 +36,31 @@
       "value": "Étude — non réalisé (arrêté en phase APS, 2023)"
     }
   ],
+  "gallery_flat": true,
   "gallery": [
     {
       "file": "sit_b.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "sit_c.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     }
   ],
-  "gallery_flat": true,
-  "tile_file": "sit_tile.jpg",
   "schemas": [
     {
       "file": "sit_axo.jpg",
-      "label": "Vue axonométrique du projet",
-      "max_width": null
+      "label": "Vue axonométrique du projet"
     },
     {
-      "file": "sit_facades.jpg",
-      "label": "",
-      "max_width": null
+      "file": "sit_facades.jpg"
     }
   ],
-  "schemas_layout": null,
-  "schemas_align_height": null,
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
+  "plans_layout": "row",
   "plans": [
     {
       "file": "sit_masse_new.jpg",
@@ -73,9 +73,6 @@
       "max_width": 380
     }
   ],
-  "plans_layout": "row",
-  "cats": [
-    "collectifs"
-  ],
+  "id": "sittelle",
   "slug": "sittelle"
 }
