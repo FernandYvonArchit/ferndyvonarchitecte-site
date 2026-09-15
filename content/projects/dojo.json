@@ -1,11 +1,15 @@
 {
-  "id": "dojo",
   "name": "Dojo Zen",
   "code": "DOJO",
   "categorie_texte": "Rénovation",
   "commune": "Couëron — 44",
   "intro": "Restructuration et rénovation thermique et acoustique d’une maison de famille : création d’un dojo zen et d’un cabinet de sophrologie sous la charpente conservée.",
+  "cats": [
+    "renovations"
+  ],
+  "ordre": 5,
   "span": "md",
+  "tile_file": "grid_dojo.jpg",
   "specs": [
     {
       "label": "Type",
@@ -32,26 +36,30 @@
       "value": "Livré"
     }
   ],
+  "gallery_flat": false,
   "gallery": [
     {
       "file": "dojo_g0.jpg",
-      "featured": true
+      "featured": true,
+      "no_border": false
     },
     {
       "file": "dojo_g1.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "dojo_g2.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "dojo_g3.jpg",
       "featured": false,
+      "no_border": false,
       "ratio": "1.5"
     }
   ],
-  "tile_file": "grid_dojo.jpg",
   "schemas": [
     {
       "file": "dojo_detail.jpg",
@@ -59,14 +67,8 @@
       "max_width": 312
     }
   ],
-  "schemas_layout": null,
-  "schemas_align_height": null,
   "schemas_hide_caption": true,
   "schemas_after_gallery": true,
-  "schemas_side_file": null,
-  "plans": [],
-  "cats": [
-    "renovations"
-  ],
+  "id": "dojo",
   "slug": "dojo-zen"
 }
