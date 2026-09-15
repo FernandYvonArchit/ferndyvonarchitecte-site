@@ -1,11 +1,15 @@
 {
-  "id": "sulniac",
   "name": "Sulniac",
   "code": "SUL",
   "categorie_texte": "13 logements locatifs sociaux",
   "commune": "Sulniac — 56",
   "intro": "Treize logements locatifs sociaux organisés autour de venelles plantées, chacun ouvert sur une terrasse ou un jardin privatif. Une écriture de toitures en pignon qui reprend le parcellaire du bourg.",
+  "cats": [
+    "collectifs"
+  ],
+  "ordre": 2,
   "span": "lg",
+  "tile_file": "sul_axo.jpg",
   "specs": [
     {
       "label": "Maître d’ouvrage",
@@ -36,89 +40,86 @@
       "value": "DET en cours"
     }
   ],
+  "gallery_flat": false,
   "gallery": [
     {
       "file": "sul_gal1.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "sul_gal2.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "sul_gal3.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "sul_gal4.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "sul_gal5.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "sul_axo.jpg",
       "featured": false,
+      "no_border": false,
       "ratio": "0.75",
       "fit": "contain"
     },
     {
       "file": "sul_hero.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "sul_detail.jpg",
-      "featured": false
-    }
-  ],
-  "tile_file": "sul_axo.jpg",
-  "schemas": [
-    {
-      "file": "sul_schema1.jpg",
-      "label": "Un programme dense sur une parcelle en forte pente",
-      "max_width": null
-    },
-    {
-      "file": "sul_schema2.jpg",
-      "label": "Des gabarits faisant écho aux typologies traditionnelles bretonnes (la longée et l’annexe en monopente)",
-      "max_width": null
-    },
-    {
-      "file": "sul_schema3.jpg",
-      "label": "Des volumes intermédiaires qui affirment les gabarits…",
-      "max_width": null
-    },
-    {
-      "file": "sul_schema4.jpg",
-      "label": "…Et offrent des espaces extérieurs généreux à tous les niveaux",
-      "max_width": null
+      "featured": false,
+      "no_border": false
     }
   ],
   "schemas_layout": "compact",
-  "schemas_align_height": null,
+  "schemas": [
+    {
+      "file": "sul_schema1.jpg",
+      "label": "Un programme dense sur une parcelle en forte pente"
+    },
+    {
+      "file": "sul_schema2.jpg",
+      "label": "Des gabarits faisant écho aux typologies traditionnelles bretonnes (la longée et l’annexe en monopente)"
+    },
+    {
+      "file": "sul_schema3.jpg",
+      "label": "Des volumes intermédiaires qui affirment les gabarits…"
+    },
+    {
+      "file": "sul_schema4.jpg",
+      "label": "…Et offrent des espaces extérieurs généreux à tous les niveaux"
+    }
+  ],
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
   "plans": [
     {
       "file": "plan_sul_masse.jpg",
-      "label": "Plan de masse",
-      "max_width": null
+      "label": "Plan de masse"
     },
     {
       "file": "plan_sul_rdc.jpg",
-      "label": "Plan du rez-de-chaussée",
-      "max_width": null
+      "label": "Plan du rez-de-chaussée"
     },
     {
       "file": "plan_sul_r1.jpg",
-      "label": "Plan du R+1",
-      "max_width": null
+      "label": "Plan du R+1"
     }
   ],
-  "cats": [
-    "collectifs"
-  ],
+  "id": "sulniac",
   "slug": "sulniac"
 }
