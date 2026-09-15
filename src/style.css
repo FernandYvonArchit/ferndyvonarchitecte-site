@@ -159,7 +159,7 @@ p { margin: 0; }
 .site-sidebar.nav-open .site-nav { display: flex; }
 .nav-link {
   font-family: 'Open Sans', 'Segoe UI', sans-serif;
-  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
   font-weight: 800;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -424,7 +424,6 @@ p { margin: 0; }
   font-weight: 800;
 }
 .about-rows {
-  border-top: 1px solid var(--line);
 }
 .about-row {
   padding: clamp(24px, 3.2vw, 36px) 0;
@@ -596,6 +595,8 @@ p { margin: 0; }
 }
 .gal-item img { display: block; width: 100%; height: auto; object-fit: cover; }
 .gal-item--wide { column-span: all; }
+.gal-item--flat { border: none; }
+.proj-gallery--flat .gal-item { border: none; }
 
 .schemas-section {
   margin-top: 8px;
@@ -616,7 +617,7 @@ p { margin: 0; }
 }
 .schemas-grid--compact {
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
+  gap: 20px;
 }
 .schemas-grid--compact .schema-item {
   padding: 0;
@@ -691,7 +692,7 @@ p { margin: 0; }
 }
 .schema-item {
   margin: 0;
-  border: 1px solid var(--line);
+  border: none;
   background: #FFFFFF;
   padding: clamp(14px, 2vw, 22px);
   align-self: start;
@@ -739,6 +740,46 @@ p { margin: 0; }
   font-size: 0.76rem;
   color: var(--ink-soft);
   font-weight: 500;
+}
+
+.proj-next {
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  padding: clamp(28px, 4vw, 44px) 0 clamp(40px, 5vw, 60px);
+  display: flex;
+  justify-content: flex-end;
+}
+.proj-next-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  text-align: right;
+}
+.proj-next-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.proj-next-name {
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  font-weight: 800;
+  transition: opacity 0.15s ease;
+}
+.proj-next-link:hover .proj-next-name { opacity: 0.55; }
+
+/* ---------- footer: plan de situation ---------- */
+.footer-plan {
+  margin-top: 28px;
+  max-width: 320px;
+}
+.footer-plan img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(1);
+  border: 1px solid var(--line);
 }
 
 /* ---------- category filter bar ---------- */
@@ -802,7 +843,7 @@ p { margin: 0; }
     margin-top: 0;
     box-shadow: 0 16px 28px -20px rgba(0,0,0,0.25);
   }
-  .nav-link { font-size: 1.3rem; }
+  .nav-link { font-size: 1.05rem; }
   .nav-link--solid { margin-top: 14px; }
   .sidebar-foot { display: none; }
   .site-main { margin-left: 0; }
