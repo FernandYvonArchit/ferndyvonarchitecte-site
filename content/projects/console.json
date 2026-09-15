@@ -1,11 +1,15 @@
 {
-  "id": "console",
   "name": "Consoles",
   "code": "CONSOLE",
   "categorie_texte": "Extension",
   "commune": "Couëron — 44",
   "intro": "Extension et rénovation d’une maison d’une cité ouvrière à Couëron : un volume en prolongement du gabarit existant, porté par une charpente bois laissée apparente, largement ouvert sur le jardin.",
+  "cats": [
+    "extensions"
+  ],
+  "ordre": 4,
   "span": "md",
+  "tile_file": "console_axo.jpg",
   "specs": [
     {
       "label": "Maître d’ouvrage",
@@ -36,6 +40,7 @@
       "value": "Livré (2022)"
     }
   ],
+  "gallery_flat": false,
   "gallery": [
     {
       "file": "console_axo.jpg",
@@ -46,49 +51,47 @@
     },
     {
       "file": "console_truss2.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "console_ext2.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "console_detail1.jpg",
-      "featured": false
+      "featured": false,
+      "no_border": false
     },
     {
       "file": "console_ext3.jpg",
-      "featured": false
-    }
-  ],
-  "tile_file": "console_axo.jpg",
-  "schemas": [
-    {
-      "file": "console_schema1.jpg",
-      "label": "Les bâtiments existants sur la parcelle",
-      "max_width": null
-    },
-    {
-      "file": "console_schema2.jpg",
-      "label": "Principe de prolongation du gabarit existant",
-      "max_width": null
-    },
-    {
-      "file": "console_schema3.jpg",
-      "label": "Tirer parti du jardin et de l’ensoleillement",
-      "max_width": null
-    },
-    {
-      "file": "console_schema4.jpg",
-      "label": "Le volume s’ouvre vers le jardin à l’ouest et se protège de l’ensoleillement d’été",
-      "max_width": null
+      "featured": false,
+      "no_border": false
     }
   ],
   "schemas_layout": "compact",
-  "schemas_align_height": null,
+  "schemas": [
+    {
+      "file": "console_schema1.jpg",
+      "label": "Les bâtiments existants sur la parcelle"
+    },
+    {
+      "file": "console_schema2.jpg",
+      "label": "Principe de prolongation du gabarit existant"
+    },
+    {
+      "file": "console_schema3.jpg",
+      "label": "Tirer parti du jardin et de l’ensoleillement"
+    },
+    {
+      "file": "console_schema4.jpg",
+      "label": "Le volume s’ouvre vers le jardin à l’ouest et se protège de l’ensoleillement d’été"
+    }
+  ],
   "schemas_hide_caption": false,
   "schemas_after_gallery": false,
-  "schemas_side_file": null,
+  "plans_layout": "row",
   "plans": [
     {
       "file": "plan_console_masse.jpg",
@@ -101,9 +104,6 @@
       "max_width": 700
     }
   ],
-  "plans_layout": "row",
-  "cats": [
-    "extensions"
-  ],
+  "id": "console",
   "slug": "consoles"
 }
