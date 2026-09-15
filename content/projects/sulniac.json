@@ -70,7 +70,7 @@
     {
       "file": "sul_axo.jpg",
       "featured": false,
-      "no_border": false,
+      "no_border": true,
       "ratio": "0.75",
       "fit": "contain"
     },
