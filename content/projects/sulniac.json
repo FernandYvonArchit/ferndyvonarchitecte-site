@@ -69,10 +69,9 @@
     },
     {
       "file": "sul_detail.jpg",
-      "featured": false,
-      "no_border": true,
-      "ratio": "1",
-      "fit": "cover"
+      "featured": true,
+      "no_border": false,
+      "fit": "contain"
     },
     {
       "file": "/images/SCHEMA 5-012.png",
