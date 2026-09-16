@@ -76,13 +76,6 @@
       "file": "sul_detail.jpg",
       "featured": false,
       "no_border": false
-    },
-    {
-      "file": "sul_axo.jpg",
-      "featured": false,
-      "no_border": true,
-      "ratio": "1",
-      "fit": "contain"
     }
   ],
   "schemas_layout": "compact",
