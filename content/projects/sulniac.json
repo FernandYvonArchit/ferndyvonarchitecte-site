@@ -76,6 +76,11 @@
       "file": "sul_detail.jpg",
       "featured": false,
       "no_border": false
+    },
+    {
+      "file": "/images/sul_gal6-1.jpg",
+      "featured": true,
+      "no_border": false
     }
   ],
   "schemas_layout": "compact",
