@@ -75,9 +75,8 @@
     },
     {
       "file": "/images/SCHEMA 5-012.png",
-      "featured": true,
+      "featured": false,
       "no_border": false,
-      "ratio": "1.5",
       "fit": "cover"
     }
   ],
