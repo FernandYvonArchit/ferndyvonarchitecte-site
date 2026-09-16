@@ -68,11 +68,6 @@
       "no_border": false
     },
     {
-      "file": "sul_hero.jpg",
-      "featured": false,
-      "no_border": false
-    },
-    {
       "file": "sul_detail.jpg",
       "featured": false,
       "no_border": false
@@ -80,6 +75,11 @@
     {
       "file": "/images/sul_gal6-1.jpg",
       "featured": true,
+      "no_border": false
+    },
+    {
+      "file": "/images/SCHEMA 5-012.png",
+      "featured": false,
       "no_border": false
     }
   ],
