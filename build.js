@@ -467,6 +467,19 @@ function copyReferencedImages() {
   console.log(`${referencedImageFiles().length - missing} image(s) copiée(s)${missing ? `, ${missing} manquante(s)` : ''}.`);
 }
 
+// ---------- sitemap / robots (pour aider les moteurs de recherche) ----------
+const SITE_URL = 'https://fernandyvon.fr';
+function buildSeoFiles() {
+  const urls = ['/'];
+  orderedCategories().forEach((cat) => urls.push(categoryUrl(cat)));
+  projects.forEach((p) => urls.push(projectUrl(p)));
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+    .map((u) => `  <url><loc>${SITE_URL}${u}</loc></url>`)
+    .join('\n')}\n</urlset>\n`;
+  writeFile(path.join(DIST, 'sitemap.xml'), xml);
+  writeFile(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+}
+
 // ---------- construction ----------
 function build() {
   if (fs.existsSync(DIST)) fs.rmSync(DIST, { recursive: true, force: true });
@@ -492,6 +505,9 @@ function build() {
 
   // Page 404 simple
   writeFile(path.join(DIST, '404.html'), page('Page introuvable — Fernand Yvon Architectes', `<section class="shell" style="padding:120px 0; text-align:center;"><h1>Page introuvable</h1><p><a class="back-link" href="/">← Retour à l'accueil</a></p></section>`));
+
+  // Plan du site + autorisation d'indexation, pour aider Google à référencer le site
+  buildSeoFiles();
 
   console.log(`Site généré dans dist/ (${projects.length} projets, ${orderedCategories().length} catégories).`);
 }
