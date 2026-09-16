@@ -79,7 +79,7 @@
       "featured": true,
       "no_border": false,
       "ratio": "1.5",
-      "fit": "contain"
+      "fit": "cover"
     }
   ],
   "schemas_layout": "compact",
