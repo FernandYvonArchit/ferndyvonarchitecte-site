@@ -52,11 +52,59 @@ function baseFile(file) {
   if (!file) return '';
   return String(file).replace(/^\/?images\//, '');
 }
+/** Lit les dimensions réelles (largeur, hauteur) d'une image directement
+ *  dans ses octets (JPEG/PNG/GIF/WEBP), sans dépendance externe. Renvoie
+ *  null si le fichier est introuvable ou dans un format non reconnu. */
+function readImageSize(filePath) {
+  try {
+    const buf = fs.readFileSync(filePath);
+    // PNG
+    if (buf.length > 24 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) {
+      return [buf.readUInt32BE(16), buf.readUInt32BE(20)];
+    }
+    // JPEG
+    if (buf.length > 4 && buf[0] === 0xff && buf[1] === 0xd8) {
+      let offset = 2;
+      while (offset + 9 < buf.length) {
+        if (buf[offset] !== 0xff) { offset++; continue; }
+        const marker = buf[offset + 1];
+        if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
+          return [buf.readUInt16BE(offset + 7), buf.readUInt16BE(offset + 5)];
+        }
+        if (marker === 0xd8 || marker === 0x01 || (marker >= 0xd0 && marker <= 0xd7)) { offset += 2; continue; }
+        const segLength = buf.readUInt16BE(offset + 2);
+        offset += 2 + segLength;
+      }
+    }
+    // GIF
+    if (buf.length > 10 && buf[0] === 0x47 && buf[1] === 0x49 && buf[2] === 0x46) {
+      return [buf.readUInt16LE(6), buf.readUInt16LE(8)];
+    }
+    // WEBP
+    if (buf.length > 30 && buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP') {
+      const fmt = buf.toString('ascii', 12, 16);
+      if (fmt === 'VP8 ') return [buf.readUInt16LE(26) & 0x3fff, buf.readUInt16LE(28) & 0x3fff];
+      if (fmt === 'VP8X') return [1 + buf.readUIntLE(24, 3), 1 + buf.readUIntLE(27, 3)];
+    }
+  } catch (e) { /* fichier illisible : on retombera sur le repli */ }
+  return null;
+}
+const dimCache = {};
+/** Dimensions d'une image : on lit toujours les octets réels du fichier
+ *  en premier (ainsi une photo tout juste importée via Pages CMS obtient
+ *  immédiatement son vrai format, sans dépendre de images-meta.json qui
+ *  peut être périmé) ; on ne retombe sur images-meta.json / [4,3] que si
+ *  le fichier est introuvable au moment du build. */
 function imgWH(file) {
   const f = baseFile(file);
   if (!f) return [4, 3];
-  const m = imagesMeta[f];
-  return m ? m : [4, 3];
+  if (dimCache[f]) return dimCache[f];
+  const candidates = [path.join(ROOT, 'images', f), path.join(ROOT, f)];
+  const found = candidates.find((p) => fs.existsSync(p));
+  const real = found ? readImageSize(found) : null;
+  const result = real || imagesMeta[f] || [4, 3];
+  dimCache[f] = result;
+  return result;
 }
 function imgSrc(file) {
   const f = baseFile(file);
