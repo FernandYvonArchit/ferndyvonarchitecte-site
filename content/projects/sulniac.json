@@ -53,11 +53,6 @@
       "no_border": false
     },
     {
-      "file": "sul_gal2.jpg",
-      "featured": false,
-      "no_border": false
-    },
-    {
       "file": "sul_gal3.jpg",
       "featured": false,
       "no_border": false
@@ -80,7 +75,9 @@
     {
       "file": "/images/SCHEMA 5-012.png",
       "featured": true,
-      "no_border": false
+      "no_border": false,
+      "ratio": "1.5",
+      "fit": "contain"
     }
   ],
   "schemas_layout": "compact",
