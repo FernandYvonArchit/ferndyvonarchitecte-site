@@ -300,12 +300,11 @@ p { margin: 0; }
   margin: 0;
   text-align: center;
   font-family: 'Open Sans', 'Segoe UI', sans-serif;
-  font-size: clamp(0.8rem, 1.4vw, 1.2rem);
-  font-weight: 600;
+  font-size: clamp(0.95rem, 1.6vw, 1.4rem);
+  font-weight: 700;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: white;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  color: black;
   transition: opacity 0.4s ease;
 }
 .cat:hover h3 {
