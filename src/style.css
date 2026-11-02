@@ -292,15 +292,21 @@ p { margin: 0; }
   transform: scale(1.03);
 }
 .cat h3 {
-  margin-top: 8px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   text-align: center;
   font-family: 'Open Sans', 'Segoe UI', sans-serif;
-  font-size: clamp(1.02rem, 2.08vw, 1.7rem);
+  font-size: clamp(0.8rem, 1.4vw, 1.2rem);
   font-weight: 600;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
   transition: opacity 0.4s ease;
-  color: var(--ink);
 }
 .cat:hover h3 {
   opacity: 0.15;
