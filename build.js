@@ -197,7 +197,7 @@ function projectCard(p) {
 
 function categoryTile(cat) {
   return `<a class="cat" href="${categoryUrl(cat)}">
-  <div class="cat-frame" style="aspect-ratio: 0.75"><img src="${imgSrc(cat.file)}" alt="${esc(cat.label)}" loading="lazy"></div>
+  <div class="cat-frame" style="aspect-ratio: 0.75"><div><img src="${imgSrc(cat.file)}" alt="${esc(cat.label)}" loading="lazy"></div></div>
   <h3>${esc(cat.label)}</h3>
 </a>`;
 }
