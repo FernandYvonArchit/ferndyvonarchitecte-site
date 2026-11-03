@@ -308,6 +308,10 @@ p { margin: 0; }
   padding: 20px 16px;
   text-align: center;
   transition: opacity 0.4s ease;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cat h3 {
   margin: 0;
