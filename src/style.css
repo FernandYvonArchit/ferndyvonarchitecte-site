@@ -305,10 +305,10 @@ p { margin: 0; }
   left: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.75);
-  padding: 20px 16px;
+  padding: 14px 16px;
   text-align: center;
   transition: opacity 0.4s ease;
-  min-height: 60px;
+  min-height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
